@@ -5,9 +5,11 @@ print ("Hi, i am Unit converter. Please enter a number of kilometers and i can c
 while True:
     km_input = input("Please enter a number of kilometers you want to convert: ")
 
-    miles = float(km_input) * 0.621371
+    km = float(km_input.replace(",", ".")) #replace comma with dot
 
-    miles_short = "{:.2f}".format(miles)
+    miles = km * 0.621371
+
+    miles_short = "{:.2f}".format(miles) #only two decimals
 
     print("{0} kilometers is {1} miles." .format(km_input, miles_short))
 
